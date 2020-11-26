@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <title>ToDo List</title>
+</head>
+
+<body id="body">
+  <header class="site-header">
+    <h1 class="site-header__title">ToDo List</h1>
+  </header>
+
+  <main class="site-content">
+    <form class="site-content__create-task">
+      <input type="text" name="add" id="add-task-text" placeholder="Add your task" />
+      <button type="submit" id="add-task">+</button>
+      <select id="filter-tasks">
+        <option selected value="">--- Task Filter ---</option>
+        <option value="1">All</option>
+        <option value="2">Complete</option>
+        <option value="3">Incomplete</option>
+      </select>
+    </form>
+    <div class="site-content__task-list">
+    </div>
+  </main>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
