@@ -272,7 +272,7 @@ button {
     align-items: flex-end;
   }
   .site-content__new-task--button.edit{
-    margin: 0 0 1rem 0;
+    margin: 0 0 1 rem 0;
   }
 }
 
