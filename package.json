@@ -1,0 +1,26 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "To Do List using JavaScript Vanilla",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deathsoul19/ToDoList.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "node",
+    "npm",
+    "html",
+    "css"
+  ],
+  "author": "Sebastian Gonzalez <sebastiangc19.01@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Deathsoul19/ToDoList/issues"
+  },
+  "homepage": "https://github.com/Deathsoul19/ToDoList#readme"
+}
