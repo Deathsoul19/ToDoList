@@ -1,4 +1,4 @@
-#✔TO DO LIST✔
+# ✔TO DO LIST✔
 
 ---
 
@@ -8,13 +8,14 @@ Administra tus pendientes y ten control de todas tus tareas diarias! 🗒🗞
 [Demo](https://sgcifuentes.github.io/ToDoList/) 💻
 
 <br/>
+
 `License 📃`
 
 The MIT License (MIT) 
 
 <br/>
 
-###Proyecto de practica de JavaScript Vanilla y Sass
+### Proyecto de practica de JavaScript Vanilla y Sass
 
 <br/>
 
