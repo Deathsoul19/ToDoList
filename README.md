@@ -1,4 +1,4 @@
-#✔TO DO LIST✔
+# ✔TO DO LIST✔
 
 ---
 
@@ -12,13 +12,17 @@ https://SGCifuentes.github.io/ToDoList/
 [Demo](https://sgcifuentes.github.io/ToDoList/) 💻
 
 <br/>
+
 `License 📃`
 
 The MIT License (MIT) 
 
 <br/>
-###Proyecto de practica de JavaScript Vanilla y Sass
+
+### Proyecto de practica de JavaScript Vanilla y Sass
+
+
 <br/>
-<br/>
+
 
 #### Hecho con ❤ [@Sebastian_GC_](https://twitter.com/Sebastian_GC_)
