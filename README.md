@@ -2,14 +2,11 @@
 
 ---
 
-<<<<<<< HEAD
 <br/>
-Administra tus pendientes y ten control de todas tus tareas diarias! 🗒🗞
-=======
-https://SGCifuentes.github.io/ToDoList/
->>>>>>> 9792850021a906883479610a3e13442a3d7f1fc1
 
-[Demo](https://sgcifuentes.github.io/ToDoList/) 💻
+## Administra tus pendientes y ten control de todas tus tareas diarias! 🗒🗞
+
+[Demo](https://sgcifuentes.github.io/ToDoList/)
 
 <br/>
 
