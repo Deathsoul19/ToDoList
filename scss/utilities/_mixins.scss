@@ -1,0 +1,14 @@
+@mixin button {
+    border: none;
+    outline: none;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    box-shadow: 0.5rem 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.25),
+      0.1rem 0.6rem 0.6rem rgba(0, 0, 0, 0.35), 0.1rem 0.1rem rgba(0, 0, 0, 0.45);
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+}

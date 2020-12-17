@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+// RESET
+
 html,
 body,
 div,
@@ -89,6 +90,7 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -117,14 +119,22 @@ q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after {
-  content: "";
-  content: none;
+blockquote {
+
+  &:before,
+  &:after {
+    content: '';
+    content: none;
+  }
 }
 
-q:before, q:after {
-  content: "";
-  content: none;
+q {
+
+  &:before,
+  &:after {
+    content: '';
+    content: none;
+  }
 }
 
 table {
@@ -132,9 +142,14 @@ table {
   border-spacing: 0;
 }
 
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+// Box-sizing
+
 html {
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: $font-size-base;
   line-height: 1.5;
 }
 
@@ -144,26 +159,21 @@ html {
   box-sizing: inherit;
 }
 
+// Html Elements
+
 body {
-  background-color: #020024;
+  background-color: $color-background;
   padding-bottom: 3rem;
 }
 
 button {
-  border: none;
-  outline: none;
-  height: 3rem;
-  width: 3rem;
-  cursor: pointer;
-  box-shadow: 0.5rem 0.1rem 1rem 0.3rem rgba(0, 0, 0, 0.25), 0.1rem 0.6rem 0.6rem rgba(0, 0, 0, 0.35), 0.1rem 0.1rem rgba(0, 0, 0, 0.45);
+ @include button;
 }
 
+// COMPONENTS
 .side-header {
-  display: flex;
-  justify-content: center;
+  @include flex;
   position: relative;
   padding-top: 1rem;
   letter-spacing: 0.6rem;
 }
-
-/*# sourceMappingURL=index.css.map */

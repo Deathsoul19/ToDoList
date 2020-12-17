@@ -1,0 +1,22 @@
+// COLORS
+
+// Background
+$color-background: #020024;
+
+// Base Color
+$color-white: #fff;
+$color-white: #000;
+
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+// Font-size
+$font-size-base: 1rem;
+$font-size-xs: $font-size-base * 1.8;
+$font-size-sm: $font-size-base * 2.4;
+$font-size-md: $font-size-base * 2.8;
+$font-size-lg: $font-size-base * 4;
+$font-size-xl: $font-size-base * 4.4;
+
+// Font-family
+$font-family: 'Roboto', sans-serif;
