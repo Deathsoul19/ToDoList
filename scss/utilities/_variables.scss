@@ -3,20 +3,32 @@
 // Background
 $color-background: #020024;
 
+//GLobal Color
+
+$color-font-task: #b9a8ff;
+$color-edit-task: #34b9db;
+$color-remove-task: #ef4836;
+$color-task: #67809f;
+$color-button-add-t: #6c7a89;
+
 // Base Color
 $color-white: #fff;
-$color-white: #000;
+$color-black: #000;
+$color-grey: #666;
 
 // FONT
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
 // Font-size
-$font-size-base: 1rem;
+$font-size-base: 10px;
 $font-size-xs: $font-size-base * 1.8;
 $font-size-sm: $font-size-base * 2.4;
-$font-size-md: $font-size-base * 2.8;
-$font-size-lg: $font-size-base * 4;
-$font-size-xl: $font-size-base * 4.4;
+$font-size-md: $font-size-base * 3;
+$font-size-lg: $font-size-base * 4.4;
+$font-size-xl: $font-size-base * 6;
 
 // Font-family
-$font-family: 'Roboto', sans-serif;
+$font-family: "Roboto", sans-serif;
+
+//Breakpoint
+$breakpoint-tablet: 768px;

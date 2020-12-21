@@ -1,151 +1,60 @@
 // RESET
 
+/* Reset */
 html,
 body,
-div,
-span,
-applet,
-object,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
 iframe,
+hr,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+h6 {
   margin: 0;
   padding: 0;
-  border: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  font-weight: normal;
+  line-height: 1.125;
 }
 
-/* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
 ul {
   list-style: none;
 }
 
-blockquote,
-q {
-  quotes: none;
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  border: none;
+  outline: none;
 }
 
-blockquote {
-
-  &:before,
-  &:after {
-    content: '';
-    content: none;
-  }
-}
-
-q {
-
-  &:before,
-  &:after {
-    content: '';
-    content: none;
-  }
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-@import 'utilities/variables';
-@import 'utilities/mixins';
-
-// Box-sizing
+@import "utilities/variables";
+@import "utilities/mixins";
 
 html {
   box-sizing: border-box;
@@ -159,6 +68,12 @@ html {
   box-sizing: inherit;
 }
 
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
 // Html Elements
 
 body {
@@ -167,13 +82,238 @@ body {
 }
 
 button {
- @include button;
+  @include button;
 }
 
 // COMPONENTS
-.side-header {
-  @include flex;
+.site-header {
+  @include flex-jc;
   position: relative;
   padding-top: 1rem;
   letter-spacing: 0.6rem;
+
+  &__title {
+    color: $color-white;
+
+    font: {
+      size: $font-size-xl;
+      weight: 500;
+    }
+
+    border-bottom: 0.2rem solid;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    &__title {
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+.site-content {
+  $color-task-transparent: rgba($color-white, 0.6);
+  @include flex-ac;
+  padding-top: 5rem;
+  flex-direction: column;
+
+  &__create-task {
+    @include flex-ac;
+    width: 80%;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    &__create-task {
+      flex-direction: column;
+      width: 90%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  & #add-task-text {
+    background-color: $color-task-transparent;
+    position: relative;
+    flex: 1;
+    padding: 1rem 4rem 1rem 1rem;
+    margin-right: 1rem;
+    font-size: $font-size-xs;
+
+    &::placeholder {
+      color: rgba($color-black, 0.4);
+      font-size: $font-size-xs;
+    }
+  }
+
+  &__create-task #add-task {
+    position: absolute;
+    right: 30vw;
+    z-index: 2;
+    background-color: $color-button-add-t;
+    color: $color-white;
+    margin: 0 0.4rem 0.1rem 0;
+  }
+
+  & #filter-tasks {
+    height: 3.5rem;
+    width: calc(25% - 13px);
+    background-color: $color-task-transparent;
+
+    font: {
+      size: 18px;
+      family: $font-family;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    &__create-task #add-task {
+      right: 7%;
+      margin-top: 0.5rem;
+
+      &-text {
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__create-task #filter-tasks {
+      width: 50%;
+    }
+  }
+
+  &__task-list {
+    @include flex-ac;
+    min-width: 80vw;
+    flex-direction: column;
+  }
+
+  &__new-task {
+    @include flex-ac;
+    background-color: $color-task;
+    margin-top: 3rem;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    width: 70vw;
+    height: auto;
+    min-height: 6rem;
+    justify-content: space-between;
+    box-shadow: 0.2rem 0.8rem 1.5rem 1rem rgba(0, 0, 0, 0.25),
+      0.4rem 0.5rem 1.2rem 0 rgba(0, 0, 0, 0.35),
+      0.2rem 0.2rem 0.5rem 0.2rem rgba(0, 0, 0, 0.45);
+
+    &--name {
+      width: calc(100% - 8rem);
+      display: flex;
+    }
+
+    & #name-task {
+      color: $color-background;
+
+      font: {
+        size: $font-size-sm;
+        weight: 400;
+      }
+    }
+
+    &--buttons {
+      @include flex-space-b;
+      width: 7rem;
+    }
+
+    &--button {
+      background-color: $color-edit-task;
+      color: $color-white;
+      margin-right: 1rem;
+      padding: 0.2rem 0 0;
+      position: relative;
+      z-index: 1;
+
+      & img {
+        height: 90%;
+        width: 90%;
+        position: relative;
+        z-index: -1;
+      }
+
+      &:last-child {
+        background-color: $color-remove-task;
+        margin: 0;
+      }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      & {
+        width: 85vw;
+        max-width: 90vw;
+      }
+
+      &--name #name-task {
+        font-size: $font-size-xs;
+      }
+
+      &--buttons {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      &--button.edit {
+        margin: 0 0 0.5rem;
+      }
+    }
+  }
+}
+
+.is-check {
+  background-color: rgba(lighten($color-task, 50%), 0.1);
+  text-decoration: line-through;
+  height: 5rem;
+  margin-left: 0.7rem;
+  width: calc(65vw - 2rem);
+
+  & .site-content__new-task--button {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  & #name-task {
+    font-size: $font-size-xs;
+    color: $color-task;
+  }
+
+  & .site-content__new-task--buttons {
+    width: 6rem;
+  }
+}
+
+input[type="checkbox"] {
+  align-self: center;
+  margin-right: 1rem;
+}
+
+.site-content__new-task--rename {
+  background-color: rgba($color-white, 0.6);
+  width: 100%;
+  height: 3rem;
+
+  font: {
+    size: $font-size-xs;
+    weight: 400;
+  }
+}
+
+.site-content__task-list--edit-task {
+  width: 100%;
+}
+
+.site-content__new-task--rename::placeholder {
+  font-size: $font-size-xs;
+  color: $color-grey;
+}
+@media (max-width: $breakpoint-tablet) {
+  .site-content__task-list {
+    @include flex-ac;
+    flex-direction: column;
+  }
+
+  .is-check {
+    width: 70vw;
+    height: auto;
+  }
 }

@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Deathsoul19/ToDoList/issues"
   },
-  "homepage": "https://github.com/Deathsoul19/ToDoList#readme"
+  "homepage": "https://github.com/Deathsoul19/ToDoList#readme",
+  "dependencies": {
+    "static-server": "^2.2.1"
+  }
 }
