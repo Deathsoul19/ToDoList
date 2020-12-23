@@ -317,3 +317,11 @@ input[type="checkbox"] {
     height: auto;
   }
 }
+
+.save {
+  background-color: green;
+}
+
+.error {
+  border: 3px solid $color-remove-task;
+}

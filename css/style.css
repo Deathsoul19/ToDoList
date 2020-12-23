@@ -282,5 +282,12 @@ input[type=checkbox] {
     height: auto;
   }
 }
+.save {
+  background-color: green;
+}
+
+.error {
+  border: 3px solid #ef4836;
+}
 
 /*# sourceMappingURL=style.css.map */
